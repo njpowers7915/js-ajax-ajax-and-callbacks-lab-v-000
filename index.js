@@ -19,6 +19,6 @@ function searchRepositories(searchTerms) {
 
 $.get(searchTerms, searchRepositories()).fail(displayError());
 
-function displayError (error) {
+function displayError() {
   console.log("I'm sorry, there's been an error. Please try again.")
 }
