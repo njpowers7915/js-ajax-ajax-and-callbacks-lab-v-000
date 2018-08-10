@@ -1,6 +1,10 @@
 $(document).ready(function (){
 });
 
+function showCommits() {
+  
+}
+
 function searchRepositories(searchTerms) {
   $(document).ready(function() {
     $.get(searchTerms, function(response) {
