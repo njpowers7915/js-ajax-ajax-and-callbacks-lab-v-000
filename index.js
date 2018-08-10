@@ -31,5 +31,5 @@ function showCommits() {
 
 
 function displayError() {
-  console.log("I'm sorry, there's been an error. Please try again.")
+  document.getElementById("errors").innerHTML = "I'm sorry, there's been an error. Please try again."
 }
