@@ -2,7 +2,11 @@ $(document).ready(function (){
 });
 
 function showCommits() {
-  
+  $(document).ready(function() {
+    $.get(searchTerms, function(response) {
+      $("#details").html(response);
+    })
+  })
 }
 
 function searchRepositories(searchTerms) {
