@@ -8,6 +8,11 @@ $.get(rootURL, searchRepositories(searchTerms)).fail(displayError());
 function searchRepositories(searchTerms) {
   $(document).ready(function() {
     $.get("https://api.github.com/search/repositories?q=", function(searchTerms) {
+      const uri = "https://api.github.com/search/repositories?q=" + searchTerms
+      const xhr = new XMLHttpRequest()
+      xhr.addEventListener("load", )
+
+
       $("#results").html(response);
     })
   })
