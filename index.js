@@ -18,14 +18,19 @@ function searchRepositories(searchTerms) {
   })
 }
 
-function showCommits() {
-  //$(document).ready(function() {
-  //  $.get(searchTerms, function(response) {
-  //    $("#details").html(response);
-  //  })
-  //})
+function show() {
+  const commits = JSON.parse(this.responseText)
   const commitsList = `<ul>${commits.map(commit => '<li><h3>' + commit.commit.author.name + ' (' + commit.author.login + ')</h3>' + commit.commit.message + '</li>').join('')}</ul>`
   document.getElementById("details").innerHTML = commitsList
+}
+
+function getCommits(el) {
+  const repoName = el.dataset.repository
+  const uri = rootURL + "/repos/" + el.dataset.username + "/" + repoName + "/commits"
+  const xhr = new XMLHttpRequest()
+  xhr.addEventListener("load", displayCommits)
+  xhr.open("GET", uri)
+  xhr.send()
 }
 
 
