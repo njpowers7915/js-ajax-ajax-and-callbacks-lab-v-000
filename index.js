@@ -1,4 +1,4 @@
-const rootURL = "https://api.github.com/repositories"
+const rootURL = "https://api.github.com/search/repositories?q="
 
 $.get(rootURL, searchRepositories(searchTerms)).fail(displayError());
 
