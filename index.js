@@ -2,7 +2,7 @@ const rootURL = "https://api.github.com/search/repositories?q="
 
 function searchRepositories(searchTerms) {
   const name = document.getElementById("username").value
-  const uri = rootURL + "/users/" + name + "/repos"
+  const uri = rootURL + searchTerms
   const xhr = new XMLHttpRequest()
   xhr.addEventListener("load", displayRepositories)
   xhr.open("GET", uri)
