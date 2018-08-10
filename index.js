@@ -1,3 +1,5 @@
+const rootURL = "https://api.github.com"
+
 $(document).ready(function (){
 });
 
