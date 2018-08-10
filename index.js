@@ -5,4 +5,6 @@ function searchRepositories(searchTerms) {
 
 }
 
-function
+$.get(searchTerms, searchRepositories()).fail(function(error) {
+  console.log('Something went wrong: ' + error);
+});
