@@ -1,4 +1,6 @@
-const rootURL = "https://api.github.com"
+const rootURL = "https://api.github.com/repositories"
+
+$.get(rootURL, searchRepositories(searchTerms)).fail(displayError());
 
 $(document).ready(function (){
 });
@@ -19,7 +21,7 @@ function searchRepositories(searchTerms) {
   })
 }
 
-$.get(searchTerms, searchRepositories()).fail(displayError());
+
 
 function displayError() {
   console.log("I'm sorry, there's been an error. Please try again.")
